@@ -1,0 +1,126 @@
+body {
+	background: #000;
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+section {
+	display: flex;
+	content-visibility: auto;
+	margin: 20px 20px 0;
+}
+section time {
+	background: #444;
+	width: 50px;
+	color: #ddd;
+	font-size: 24px;
+	text-align: center;
+	min-height: 100%;
+	margin: -1px 8px 20px 0;
+}
+section time b {
+	display: block;
+	font-weight: normal;
+	letter-spacing: 10px;
+	transform: rotate(-90deg);
+	margin-top: 70px;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	font-size: 16px;
+	width: 170px;
+	min-height: 218px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+li img {
+	height: 220px;
+	display: block;
+	margin: 0 auto 5px auto;
+	cursor: pointer;
+	user-select: none;
+}
+/* photoset index number */
+li u {
+	display: inline-block;
+	font-size: 10px;
+	text-decoration: none;
+	color: #606060;
+	margin-right: 3px;
+}
+li u::before {
+	content: "#";
+	color: #444;
+}
+/* photoset publish date */
+li i {
+	display: inline-block;
+	font-size: 10px;
+	font-style: normal;
+	color: #606060;
+}
+li i::before {
+	content: "(";
+	color: #555;
+}
+li i::after {
+	content: ")";
+	color: #555;
+}
+/* photoset title */
+li p {
+	margin: 0 10px -1px 10px;
+	font-weight: normal;
+	line-height: 100%;
+}
+li:hover i {
+}
+
+li u.nat {
+	color: #361;
+}
+li u.nat::before {
+	color: #251;
+}
+
+
+footer {
+	background: #444;
+	color: #000;
+	margin: 10px 20px 20px;
+	padding: 10px 10px 8px;
+}
+
+
+#lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+
+}
+#lightbox img {
+	margin-top: 0;
+	max-height: 100%;
+	border: 1px solid #000;
+	box-shadow: 0 0 20px #000;
+	cursor: pointer;
+	user-select: none;
+}
+#lightbox:target {
+	outline: none;
+	display: block;
+}
